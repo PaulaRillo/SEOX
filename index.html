@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./scss/elastique.css">
+    <title>Meus Pedidos | Elastique</title>
+</head>
+<body>
+
+  <header>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container-lg">
+        <div class="col-2 ms-5">
+          <button type="button" class="btn d-none d-lg-block float-start">
+            <i class="elastiqueicon-menu"></i>
+          </button>
+          <button type="button" class="btn navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="elastiqueicon-menu"></i>
+          </button>
+          <a class="navbar-brand ms-3" href="#">Logo</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <div class="col-md-4 col-sm-12 search-bar">
+            <input type="text" class="form-control rounded-pill" placeholder="O que você procura hoje?" aria-label="Search" aria-describedby="basic-addon1"><i class="elastiqueicon-search"></i>
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Comprar</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <button type="button" class="btn btn-bag rounded-pill float-start me-3">
+              <i class="elastiqueicon-bag"></i>
+            </button>
+            <p class="pt-2 m-0"><i class="elastiqueicon-user float-start me-2"></i>Olá, Jaqueline</p>        
+          </div>
+        </div>
+      </div><!-- /container-lg-->
+    </nav>
+    <!-- /navbar -->
+  </header>
+
+  <main>  
+    <!-- Main Screen -->
+    <div class="container">
+      <div class="row">
+
+        <!-- Sidebar Nav -->
+        <div class="col-md-auto col-sm-12">
+          <div class="nav-user">
+            <div class="user-profile">
+              <a href=""><div class="img-profile rounded-circle m-auto position-relative"><span class="position-absolute photo-bullet translate-middle start-100 badge border border-light rounded-circle"><i class="elastiqueicon-camera"></i></span></div></a>
+              <p class="user-name text-center mt-2">Jaqueline de Oliveira</p>
+            </div>
+            
+            <ul class="nav flex-column nav-pills">
+              <li class="nav-item">
+                <a class="nav-link active align-items-center" aria-current="page" href="#"><i class="elastiqueicon-package float-start"></i>Meus pedidos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link align-items-center" href="#"><i class="elastiqueicon-user float-start"></i>Meus dados</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link align-items-center" href="#"><i class="elastiqueicon-location float-start"></i>Endereços</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link align-items-center" href="#"><i class="elastiqueicon-measure float-start"></i>Minhas medidas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link align-items-center" href="#"><i class="elastiqueicon-lock float-start"></i>Minha conta</a>
+              </li>   
+              <li class="nav-item">
+                <a class="nav-link text-muted align-items-center" href="#"><i class="elastiqueicon-exit float-start"></i>Sair</a>
+              </li>     
+            </ul>
+          </div>
+        </div><!-- /Sidebar Nav -->
+
+
+        <!-- Orders List -->
+        <div class="col d-grid">
+          <h3 class="page-title">Meus pedidos</h3>
+          <!-- Order List Item -->
+          <div class="order-box">
+            <div class="row"><!-- Order Resume -->
+              <div class="col-1 me-2">
+                <button type="button" class="btn btn-order btn-order-delivered border-radius-lg">
+                  <i class="elastiqueicon-checkbox"></i>
+                </button>
+              </div>
+              <div class="col align-self-center">
+                <p class="p-0 m-0"><i class="elastiqueicon-package float-start me-2"></i> Pedido #17048</p>
+                <p class="p-0 m-0 text-order-delivered">Pedido entregue!</p>
+              </div>
+              <div class="col align-self-center">
+                  <div class="products float-start">
+                    <img src="./img/img02.jpg" alt="Product 02" class="rounded-circle">
+                    <img src="./img/img01.jpg" alt="Product 01" class="rounded-circle">
+                  </div>
+                  <div class="float-start">
+                    <p class="p-0 m-0">R$ 980,00</p>
+                    <p class="p-0 m-0 text-muted">02 itens</p>
+                  </div>
+              </div>
+              <div class="col d-grid gap-2">
+                <button type="button" class="btn btn-sm btn-expand-details accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseDetails1" aria-expanded="false" aria-controls="collapseDetails1">Mais detalhes</button>
+              </div>
+            </div><!-- /Order Resume -->
+            <!-- Expand Details -->
+            <div class="collapse show" id="collapseDetails1">
+              <!-- Shipping Box-->
+              <div class="shipping-box">
+                <div class="row row-cols-auto">
+                  <div class="col d-flex align-items-center">
+                    <i class="elastiqueicon-truck"></i>
+                  </div>
+                  <div class="col-4 align-self-center">
+                    <p class="p-0 m-0">Frete:</p>
+                    <p class="p-0 m-0"><span class="text-muted">R$ 35,10</span><span class="badge badge-order ms-2">via SEDEX</span></p>
+                  </div>
+                  <div class="col-4 g-0 align-self-center">
+                    <p class="p-0 m-0">Forma de pagamento:</p>
+                    <p class="p-0 m-0 text-muted">Cartão de Crédito</p>
+                  </div>
+                  <div class="col-2 ms-n3 g-0 align-self-center">
+                    <p class="p-0 m-0">Entregue dia:</p>
+                    <p class="p-0 m-0 text-order-delivered">09/fev</p>
+                  </div>
+                  <div class="col-1 g-0 align-self-center">
+                    <button type="button" class="btn btn-shipping float-end"><i class="elastiqueicon-plus"></i></button>                    
+                  </div>
+                </div>
+              </div><!-- /Shipping Box-->
+              <div class="clearfix">&nbsp;</div><!-- *fix flex container -->
+
+              <!-- Order status box-->
+              <div class="row-flex order-status-box"><!-- *elements with relative position -->
+                <div class="position-relative order-progress">
+                  <!-- Order progress-->
+                  <div class="progress" style="height: 1px;">
+                    <div class="progress-bar progress-order-delivered" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-order-delivered rounded-pill order-bullet p-0"></button>
+                  <button type="button" class="position-absolute top-0 start-25 translate-middle btn btn-sm btn-order-delivered rounded-pill order-bullet p-0"></button>
+                  <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-order-delivered rounded-pill order-bullet p-0"></button>
+                  <button type="button" class="position-absolute top-0 start-75 translate-middle btn btn-sm btn-order-delivered rounded-pill order-bullet p-0"></button>
+                  <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-order-delivered btn-order"><i class="elastiqueicon-checkbox"></i></button>
+                  <!-- /Order progress bar-->
+                  <div class="order-status-info">
+                    <div class="position-absolute start-0 translate-middle order-status text-center">
+                      <p class="p-0 m-0 text-muted">Pedido recebido</p>
+                      <p class="p-0 m-0">03/fev 09:33</p>
+                    </div>
+                    <div class="position-absolute start-25 translate-middle order-status text-center">
+                      <p class="p-0 m-0 text-muted">Pagamento aprovado</p>
+                      <p class="p-0 m-0">03/fev 14:33</p>
+                    </div>
+                    <div class="position-absolute start-50 translate-middle order-status text-center">
+                      <p class="p-0 m-0 text-muted">Em separação</p>
+                      <p class="p-0 m-0">06/fev 09:13</p>
+                    </div>
+                    <div class="position-absolute start-75 translate-middle order-status text-center">
+                      <p class="p-0 m-0 text-muted">Em transporte</p>
+                      <p class="p-0 m-0">08/fev 21:45</p>
+                    </div>
+                    <div class="position-absolute start-100 translate-middle order-status text-center">
+                      <p class="p-0 m-0 text-muted">Pedido entregue</p>
+                      <p class="p-0 m-0">09/fev 00:00</p>
+                    </div>
+                  </div>
+                  <!-- /Order progress-->                
+                </div>
+              </div><!-- /Order status box-->
+              <div class="clearfix">&nbsp;</div><!-- *fix flex container -->
+
+              <!-- Ordem Item List -->
+              <div class="order-itens-box">
+                <!-- Ordem Item -->
+                <div class="row order-item">
+                  <div class="col-auto me-auto g-0">
+                    <img src="./img/img02.jpg" alt="Product 02">
+                  </div>
+                  <div class="col align-self-center">
+                    <p class="p-0 m-0">Elastique</p>
+                    <p class="p-0 m-0 text-muted">R$ 540,00</p>
+                    <p class="p-0 m-0">01 unidade
+                      <span class="badge badge-order ms-2">Cor: Neutro Rosado</span>
+                      <span class="badge badge-order ms-2">Tamanho: M</span>
+                    </p>  
+                  </div>
+                  <div class="col-auto me-auto g-0 align-self-center">
+                    <a href="#"><i class="elastiqueicon-star float-start me-2"></i> Avalie este produto</a>
+                  </div>
+                </div><!-- /Ordem Item -->
+                
+                <!-- Ordem Item -->
+                <div class="row order-item">
+                  <div class="col-auto me-auto g-0">
+                    <img src="./img/img01.jpg" alt="Product 01">
+                  </div>
+                  <div class="col align-self-center">
+                    <p class="p-0 m-0">Elastique</p>
+                    <p class="p-0 m-0 text-muted">R$ 540,00</p>
+                    <p class="p-0 m-0">01 unidade
+                      <span class="badge badge-order ms-2">Cor: Preto</span>
+                      <span class="badge badge-order ms-2">Tamanho: P</span>
+                    </p>  
+                  </div>
+                  <div class="col-auto me-auto g-0 align-self-center">
+                    <a href="#"><i class="elastiqueicon-star float-start me-2"></i> Avalie este produto</a>
+                  </div>
+                </div><!-- /Ordem Item -->
+              </div><!-- /Ordem Item List -->
+
+            </div><!-- /Expand Details-->
+          </div><!-- /Order Box /Order List Item -->
+
+          <!-- Order List Item -->
+          <div class="order-box">
+            <div class="row"><!-- Order Resume -->
+              <div class="col-1 me-2">
+                <button type="button" class="btn btn-order btn-order-shipped border-radius-lg">
+                  <i class="elastiqueicon-truck-white"></i>
+                </button>
+              </div>
+              <div class="col align-self-center">
+                <p class="p-0 m-0"><i class="elastiqueicon-package float-start me-2"></i> Pedido #15324</p>
+                <p class="p-0 m-0 text-order-shipped">Seu pedido está a caminho</p>
+              </div>
+              <div class="col align-self-center">
+                  <div class="products float-start">
+                    <img src="./img/img02.jpg" alt="Product 02" class="rounded-circle">
+                  </div>
+                  <div class="float-start">
+                    <p class="p-0 m-0">R$ 70,00</p>
+                    <p class="p-0 m-0 text-muted">01 item</p>
+                  </div>
+              </div>
+              <div class="col d-grid gap-2">
+                <!-- Expand Details button - SET ID HERE-->
+                <button type="button" class="btn btn-sm btn-expand-details accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseDetails2" aria-expanded="false" aria-controls="collapseDetails2">Mais detalhes</button>
+              </div>
+            </div><!-- /Order Resume -->
+            <!-- Expand Details -->
+            <div class="collapse" id="collapseDetails2"><!-- Expand Details button - SET ID HERE-->
+              <!-- Shipping Box-->
+              <div class="shipping-box">
+                <div class="row row-cols-auto">
+                  <div class="col d-flex align-items-center">
+                    <i class="elastiqueicon-truck"></i>
+                  </div>
+                  <div class="col-4 align-self-center">
+                    <p class="p-0 m-0">Frete:</p>
+                    <p class="p-0 m-0"><span class="text-muted">R$ 24,10</span><span class="badge badge-order ms-2">via SEDEX</span></p>
+                  </div>
+                  <div class="col-3 g-0 align-self-center">
+                    <p class="p-0 m-0">Forma de pagamento:</p>
+                    <p class="p-0 m-0 text-muted">Cartão de Crédito</p>
+                  </div>
+                  <div class="col-3 ms-n3 g-0 align-self-center">
+                    <button type="button" class="btn btn-sm btn-tracking"><i class="elastiqueicon-tracking float-start me-2"></i>OD828132785BR</button>
+                  </div>
+                  <div class="col-1 g-0 align-self-center">
+                    <button type="button" class="btn btn-shipping float-end"><i class="elastiqueicon-plus"></i></button>                    
+                  </div>
+                </div>
+              </div><!-- /Shipping Box-->
+              <div class="clearfix">&nbsp;</div><!-- *fix flex container -->
+
+              <!-- Order status box-->
+              <div class="row-flex order-status-box"><!-- *elements with relative position -->
+                <div class="position-relative order-progress">
+                  <!-- Order progress-->
+                  <div class="progress" style="height: 1px;">
+                    <div class="progress-bar progress-order-shipped" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="75"></div>
+                  </div>
+                  <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-order-shipped rounded-pill order-bullet p-0"></button>
+                  <button type="button" class="position-absolute top-0 start-25 translate-middle btn btn-sm btn-order-shipped rounded-pill order-bullet p-0"></button>
+                  <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-order-shipped rounded-pill order-bullet p-0"></button>
+                  <button type="button" class="position-absolute top-0 start-75 translate-middle btn btn-sm btn-order-shipped btn-order"><i class="elastiqueicon-truck-white"></i></button>
+                  <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-order-muted rounded-pill order-bullet p-0"></button>
+                  <!-- /Order progress bar-->
+                  <div class="order-status-info">
+                    <div class="position-absolute start-0 translate-middle order-status text-center">
+                      <p class="p-0 m-0 text-muted">Pedido recebido</p>
+                      <p class="p-0 m-0">03/fev 09:33</p>
+                    </div>
+                    <div class="position-absolute start-25 translate-middle order-status text-center">
+                      <p class="p-0 m-0 text-muted">Pagamento aprovado</p>
+                      <p class="p-0 m-0">03/fev 14:33</p>
+                    </div>
+                    <div class="position-absolute start-50 translate-middle order-status text-center">
+                      <p class="p-0 m-0 text-muted">Em separação</p>
+                      <p class="p-0 m-0">06/fev 09:13</p>
+                    </div>
+                    <div class="position-absolute start-75 translate-middle order-status text-center">
+                      <p class="p-0 m-0 text-muted">Em transporte</p>
+                      <p class="p-0 m-0">08/fev 21:45</p>
+                    </div>
+                    <div class="position-absolute start-100 translate-middle order-status text-center">
+                      <p class="p-0 m-0 text-muted">Pedido entregue</p>
+                      <p class="p-0 m-0"></p>
+                    </div>
+                  </div>
+                  <!-- /Order progress-->                
+                </div>
+              </div><!-- /Order status box-->
+              <div class="clearfix">&nbsp;</div><!-- *fix flex container -->
+
+              <!-- Ordem Item List -->
+              <div class="order-itens-box">
+                <!-- Ordem Item -->
+                <div class="row order-item">
+                  <div class="col-auto me-auto g-0">
+                    <img src="./img/img02.jpg" alt="Product 02">
+                  </div>
+                  <div class="col align-self-center">
+                    <p class="p-0 m-0">Elastique</p>
+                    <p class="p-0 m-0 text-muted">R$ 540,00</p>
+                    <p class="p-0 m-0">01 unidade
+                      <span class="badge badge-order ms-2">Cor: Neutro Rosado</span>
+                      <span class="badge badge-order ms-2">Tamanho: M</span>
+                    </p>  
+                  </div>
+                  <div class="col-auto me-auto g-0 align-self-center">
+                    <a href="#">Ver produto<i class="elastiqueicon-view float-end ms-2"></i></a>
+                  </div>
+                </div><!-- /Ordem Item -->
+
+              </div><!-- /Ordem Item List -->
+
+            </div><!-- /Expand Details-->
+          </div><!-- /Order Box /Order List Item -->
+
+          <!-- Order List Item -->
+          <div class="order-box">
+            <div class="row"><!-- Order Resume -->
+              <div class="col-1 me-2">
+                <button type="button" class="btn btn-order btn-order-processing border-radius-lg">
+                  <i class="elastiqueicon-package-white"></i>
+                </button>
+              </div>
+              <div class="col align-self-center">
+                <p class="p-0 m-0"><i class="elastiqueicon-package float-start me-2"></i>Pedido #16432</p>
+                <p class="p-0 m-0 text-order-processing">Seu pedido está em separação</p>
+              </div>
+              <div class="col align-self-center">
+                  <div class="products float-start">
+                    <img src="./img/img02.jpg" alt="Product 02" class="rounded-circle">
+                  </div>
+                  <div class="float-start">
+                    <p class="p-0 m-0">R$ 800,00</p>
+                    <p class="p-0 m-0 text-muted">01 item</p>
+                  </div>
+              </div>
+              <div class="col d-grid gap-2">
+                <!-- Expand Details button - SET ID HERE-->
+                <button type="button" class="btn btn-sm btn-expand-details accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseDetails3" aria-expanded="false" aria-controls="collapseDetails3">Mais detalhes</button>
+              </div>
+            </div><!-- /Order Resume -->
+            <!-- Expand Details -->
+            <div class="collapse" id="collapseDetails3"><!-- Expand Details button - SET ID HERE-->
+
+              <div class="clearfix">&nbsp;</div><!-- *fix flex container -->
+              <!-- Order status box-->
+              <div class="row-flex order-status-box"><!-- *elements with relative position -->
+                <div class="position-relative order-progress">
+                  <!-- Order progress-->
+                  <div class="progress" style="height: 1px;">
+                    <div class="progress-bar progress-order-processing" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="50"></div>
+                  </div>
+                  <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-order-processing rounded-pill order-bullet p-0"></button>
+                  <button type="button" class="position-absolute top-0 start-25 translate-middle btn btn-sm btn-order-processing rounded-pill order-bullet p-0"></button>
+                  <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-order-processing btn-order"><i class="elastiqueicon-truck-white"></i></button>
+                  <button type="button" class="position-absolute top-0 start-75 translate-middle btn btn-sm btn-order-muted rounded-pill order-bullet p-0"></button>
+                  <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-order-muted rounded-pill order-bullet p-0"></button>
+                  <!-- /Order progress bar-->
+                  <div class="order-status-info">
+                    <div class="position-absolute start-0 translate-middle order-status text-center">
+                      <p class="p-0 m-0 text-muted">Pedido recebido</p>
+                      <p class="p-0 m-0">03/fev 09:33</p>
+                    </div>
+                    <div class="position-absolute start-25 translate-middle order-status text-center">
+                      <p class="p-0 m-0 text-muted">Pagamento aprovado</p>
+                      <p class="p-0 m-0">03/fev 14:33</p>
+                    </div>
+                    <div class="position-absolute start-50 translate-middle order-status text-center">
+                      <p class="p-0 m-0 text-muted">Em separação</p>
+                      <p class="p-0 m-0">06/fev 09:13</p>
+                    </div>
+                    <div class="position-absolute start-75 translate-middle order-status text-center">
+                      <p class="p-0 m-0 text-muted">Em transporte</p>
+                      <p class="p-0 m-0"></p>
+                    </div>
+                    <div class="position-absolute start-100 translate-middle order-status text-center">
+                      <p class="p-0 m-0 text-muted">Pedido entregue</p>
+                      <p class="p-0 m-0"></p>
+                    </div>
+                  </div>
+                  <!-- /Order progress-->                
+                </div>
+              </div><!-- /Order status box-->
+              <div class="clearfix">&nbsp;</div><!-- *fix flex container -->
+
+              <!-- Ordem Item List -->
+              <div class="order-itens-box">
+                <!-- Ordem Item -->
+                <div class="row order-item">
+                  <div class="col-auto me-auto g-0">
+                    <img src="./img/img02.jpg" alt="Product 02">
+                  </div>
+                  <div class="col align-self-center">
+                    <p class="p-0 m-0">Elastique</p>
+                    <p class="p-0 m-0 text-muted">R$ 800,00</p>
+                    <p class="p-0 m-0">01 unidade
+                      <span class="badge badge-order ms-2">Cor: Neutro Rosado</span>
+                      <span class="badge badge-order ms-2">Tamanho: M</span>
+                    </p>  
+                  </div>
+                  <div class="col-auto me-auto g-0 align-self-center">
+                    <a href="#">Ver produto<i class="elastiqueicon-view float-end ms-2"></i></a>
+                  </div>
+                </div><!-- /Ordem Item -->
+
+              </div><!-- /Ordem Item List -->
+
+            </div><!-- /Expand Details-->
+          </div><!-- /Order Box /Order List Item -->
+
+          <!-- Order List Item -->
+          <div class="order-box">
+            <div class="row"><!-- Order Resume -->
+              <div class="col-1 me-2">
+                <button type="button" class="btn btn-order btn-order-completed border-radius-lg">
+                  <i class="elastiqueicon-thumb-white"></i>
+                </button>
+              </div>
+              <div class="col align-self-center">
+                <p class="p-0 m-0"><i class="elastiqueicon-package float-start me-2"></i>Pedido #36597</p>
+                <p class="p-0 m-0 text-order-completed">O pagamento foi aprovado!</p>
+              </div>
+              <div class="col align-self-center">
+                <div class="products float-start">
+                  <img src="./img/img01.jpg" alt="Product 01" class="rounded-circle">
+                  <img src="./img/img02.jpg" alt="Product 02" class="rounded-circle">
+                </div>
+                <div class="float-start">
+                  <p class="p-0 m-0">R$ 1250,00</p>
+                  <p class="p-0 m-0 text-muted">02 itens</p>
+                </div>
+
+              </div>
+              <div class="col d-grid gap-2">
+                <!-- Expand Details button - SET ID HERE-->
+                <button type="button" class="btn btn-sm btn-expand-details accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseDetails4" aria-expanded="false" aria-controls="collapseDetails4">Mais detalhes</button>
+              </div>
+            </div><!-- /Order Resume -->
+            <!-- Expand Details -->
+            <div class="collapse" id="collapseDetails4"><!-- Expand Details button - SET ID HERE-->
+
+              <div class="clearfix">&nbsp;</div><!-- *fix flex container -->
+              <!-- Order status box-->
+              <div class="row-flex order-status-box"><!-- *elements with relative position -->
+                <div class="position-relative order-progress">
+                  <!-- Order progress-->
+                  <div class="progress" style="height: 1px;">
+                    <div class="progress-bar progress-order-completed" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="25"></div>
+                  </div>
+                  <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-order-completed rounded-pill order-bullet p-0"></button>
+                  <button type="button" class="position-absolute top-0 start-25 translate-middle btn btn-sm btn-order-completed btn-order"><i class="elastiqueicon-thumb-white"></i></button>
+                  <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-order-muted rounded-pill order-bullet p-0"></button>
+                  <button type="button" class="position-absolute top-0 start-75 translate-middle btn btn-sm btn-order-muted rounded-pill order-bullet p-0"></button>
+                  <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-order-muted rounded-pill order-bullet p-0"></button>
+                  <!-- /Order progress bar-->
+                  <div class="order-status-info">
+                    <div class="position-absolute start-0 translate-middle order-status text-center">
+                      <p class="p-0 m-0 text-muted">Pedido recebido</p>
+                      <p class="p-0 m-0">03/fev 09:33</p>
+                    </div>
+                    <div class="position-absolute start-25 translate-middle order-status text-center">
+                      <p class="p-0 m-0 text-muted">Pagamento aprovado</p>
+                      <p class="p-0 m-0"></p>
+                    </div>
+                    <div class="position-absolute start-50 translate-middle order-status text-center">
+                      <p class="p-0 m-0 text-muted">Em separação</p>
+                      <p class="p-0 m-0"></p>
+                    </div>
+                    <div class="position-absolute start-75 translate-middle order-status text-center">
+                      <p class="p-0 m-0 text-muted">Em transporte</p>
+                      <p class="p-0 m-0"></p>
+                    </div>
+                    <div class="position-absolute start-100 translate-middle order-status text-center">
+                      <p class="p-0 m-0 text-muted">Pedido entregue</p>
+                      <p class="p-0 m-0"></p>
+                    </div>
+                  </div>
+                  <!-- /Order progress-->                
+                </div>
+              </div><!-- /Order status box-->
+              <div class="clearfix">&nbsp;</div><!-- *fix flex container -->
+
+              <!-- Ordem Item List -->
+              <div class="order-itens-box">
+                <!-- Ordem Item -->
+                <div class="row order-item">
+                  <div class="col-auto me-auto g-0">
+                    <img src="./img/img01.jpg" alt="Product 01">
+                  </div>
+                  <div class="col align-self-center">
+                    <p class="p-0 m-0">Elastique</p>
+                    <p class="p-0 m-0 text-muted">R$ 800,00</p>
+                    <p class="p-0 m-0">01 unidade
+                      <span class="badge badge-order ms-2">Cor: Preto</span>
+                      <span class="badge badge-order ms-2">Tamanho: P</span>
+                    </p>  
+                  </div>
+                  <div class="col-auto me-auto g-0 align-self-center">
+                    <a href="#">Ver produto<i class="elastiqueicon-view float-end ms-2"></i></a>
+                  </div>
+                </div><!-- /Ordem Item -->
+
+                <!-- Ordem Item -->
+                <div class="row order-item">
+                  <div class="col-auto me-auto g-0">
+                    <img src="./img/img02.jpg" alt="Product 02">
+                  </div>
+                  <div class="col align-self-center">
+                    <p class="p-0 m-0">Elastique</p>
+                    <p class="p-0 m-0 text-muted">R$ 450,00</p>
+                    <p class="p-0 m-0">01 unidade
+                      <span class="badge badge-order ms-2">Cor: Neutro Rosado</span>
+                      <span class="badge badge-order ms-2">Tamanho: M</span>
+                    </p>  
+                  </div>
+                  <div class="col-auto me-auto g-0 align-self-center">
+                    <a href="#">Ver produto<i class="elastiqueicon-view float-end ms-2"></i></a>
+                  </div>
+                </div><!-- /Ordem Item -->
+
+              </div><!-- /Ordem Item List -->
+
+            </div><!-- /Expand Details-->
+          </div><!-- /Order Box /Order List Item -->
+
+          <!-- Order List Item -->
+          <div class="order-box">
+            <div class="row"><!-- Order Resume -->
+              <div class="col-1 me-2">
+                <button type="button" class="btn btn-order btn-order-success border-radius-lg">
+                  <i class="elastiqueicon-load-white"></i>
+                </button>
+              </div>
+              <div class="col align-self-center">
+                <p class="p-0 m-0"><i class="elastiqueicon-package float-start me-2"></i>Pedido #64528</p>
+                <p class="p-0 m-0 text-order-success">O pedido foi recebido</p>
+              </div>
+              <div class="col align-self-center">
+                <div class="products float-start position-relative">
+                  <img src="./img/img01.jpg" alt="Product 01" class="rounded-circle">
+                  <img src="./img/img02.jpg" alt="Product 02" class="rounded-circle">
+                  <span class="position-absolute extra-bullet translate-middle badge border border-light rounded-circle bg-danger p-1"><i class="elastiqueicon-plus-white"></i></span>
+                </div>
+                <div class="float-start">
+                  <p class="p-0 m-0">R$ 800,00</p>
+                  <p class="p-0 m-0 text-muted">03 itens</p>
+                </div>
+
+              </div>
+              <div class="col d-grid gap-2">
+                <!-- Expand Details button - SET ID HERE-->
+                <button type="button" class="btn btn-sm btn-expand-details accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseDetails5" aria-expanded="false" aria-controls="collapseDetails5">Mais detalhes</button>
+              </div>
+            </div><!-- /Order Resume -->
+            <!-- Expand Details -->
+            <div class="collapse" id="collapseDetails5"><!-- Expand Details button - SET ID HERE-->
+
+              <div class="clearfix">&nbsp;</div><!-- *fix flex container -->
+              <!-- Order status box-->
+              <div class="row-flex order-status-box"><!-- *elements with relative position -->
+                <div class="position-relative order-progress">
+                  <!-- Order progress-->
+                  <div class="progress" style="height: 1px;">
+                    <div class="progress-bar progress-order-success" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0"></div>
+                  </div>
+                  <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-order-success btn-order"><i class="elastiqueicon-load-white"></i></button>
+                  <button type="button" class="position-absolute top-0 start-25 translate-middle btn btn-sm btn-order-muted rounded-pill order-bullet p-0"></button>
+                  <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-order-muted rounded-pill order-bullet p-0"></button>
+                  <button type="button" class="position-absolute top-0 start-75 translate-middle btn btn-sm btn-order-muted rounded-pill order-bullet p-0"></button>
+                  <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-order-muted rounded-pill order-bullet p-0"></button>
+                  <!-- /Order progress bar-->
+                  <div class="order-status-info">
+                    <div class="position-absolute start-0 translate-middle order-status text-center">
+                      <p class="p-0 m-0 text-muted">Pedido recebido</p>
+                      <p class="p-0 m-0">03/fev 09:33</p>
+                    </div>
+                    <div class="position-absolute start-25 translate-middle order-status text-center">
+                      <p class="p-0 m-0 text-muted">Pagamento aprovado</p>
+                      <p class="p-0 m-0"></p>
+                    </div>
+                    <div class="position-absolute start-50 translate-middle order-status text-center">
+                      <p class="p-0 m-0 text-muted">Em separação</p>
+                      <p class="p-0 m-0"></p>
+                    </div>
+                    <div class="position-absolute start-75 translate-middle order-status text-center">
+                      <p class="p-0 m-0 text-muted">Em transporte</p>
+                      <p class="p-0 m-0"></p>
+                    </div>
+                    <div class="position-absolute start-100 translate-middle order-status text-center">
+                      <p class="p-0 m-0 text-muted">Pedido entregue</p>
+                      <p class="p-0 m-0"></p>
+                    </div>
+                  </div>
+                  <!-- /Order progress-->                
+                </div>
+              </div><!-- /Order status box-->
+              <div class="clearfix">&nbsp;</div><!-- *fix flex container -->
+
+              <!-- Ordem Item List -->
+              <div class="order-itens-box">
+                <!-- Ordem Item -->
+                <div class="row order-item">
+                  <div class="col-auto me-auto g-0">
+                    <img src="./img/img01.jpg" alt="Product 01">
+                  </div>
+                  <div class="col align-self-center">
+                    <p class="p-0 m-0">Elastique</p>
+                    <p class="p-0 m-0 text-muted">R$ 250,00</p>
+                    <p class="p-0 m-0">01 unidade
+                      <span class="badge badge-order ms-2">Cor: Preto</span>
+                      <span class="badge badge-order ms-2">Tamanho: P</span>
+                    </p>  
+                  </div>
+                  <div class="col-auto me-auto g-0 align-self-center">
+                    <a href="#">Ver produto<i class="elastiqueicon-view float-end ms-2"></i></a>
+                  </div>
+                </div><!-- /Ordem Item -->
+
+                <!-- Ordem Item -->
+                <div class="row order-item">
+                  <div class="col-auto me-auto g-0">
+                    <img src="./img/img02.jpg" alt="Product 02">
+                  </div>
+                  <div class="col align-self-center">
+                    <p class="p-0 m-0">Elastique</p>
+                    <p class="p-0 m-0 text-muted">R$ 350,00</p>
+                    <p class="p-0 m-0">01 unidade
+                      <span class="badge badge-order ms-2">Cor: Neutro Rosado</span>
+                      <span class="badge badge-order ms-2">Tamanho: M</span>
+                    </p>  
+                  </div>
+                  <div class="col-auto me-auto g-0 align-self-center">
+                    <a href="#">Ver produto<i class="elastiqueicon-view float-end ms-2"></i></a>
+                  </div>
+                </div><!-- /Ordem Item -->
+
+                <!-- Ordem Item -->
+                <div class="row order-item">
+                  <div class="col-auto me-auto g-0">
+                    <img src="./img/img01.jpg" alt="Product 01">
+                  </div>
+                  <div class="col align-self-center">
+                    <p class="p-0 m-0">Elastique</p>
+                    <p class="p-0 m-0 text-muted">R$ 200,00</p>
+                    <p class="p-0 m-0">01 unidade
+                      <span class="badge badge-order ms-2">Cor: Preto</span>
+                      <span class="badge badge-order ms-2">Tamanho: P</span>
+                    </p>  
+                  </div>
+                  <div class="col-auto me-auto g-0 align-self-center">
+                    <a href="#">Ver produto<i class="elastiqueicon-view float-end ms-2"></i></a>
+                  </div>
+                </div><!-- /Ordem Item -->
+
+              </div><!-- /Ordem Item List -->
+
+            </div><!-- /Expand Details-->
+          </div><!-- /Order Box /Order List Item -->
+
+          <!-- Order List Item -->
+          <div class="order-box">
+            <div class="row"><!-- Order Resume -->
+              <div class="col-1 me-2">
+                <button type="button" class="btn btn-order btn-order-canceled border-radius-lg">
+                  <i class="elastiqueicon-sad-white"></i>
+                </button>
+              </div>
+              <div class="col align-self-center">
+                <p class="p-0 m-0"><i class="elastiqueicon-package float-start me-2"></i>Pedido #54462</p>
+                <p class="p-0 m-0 text-order-canceled">Seu pedido foi cancelado</p>
+              </div>
+              <div class="col align-self-center">
+                <div class="products float-start position-relative">
+                  <img src="./img/img01.jpg" alt="Product 01" class="rounded-circle">
+                  <img src="./img/img02.jpg" alt="Product 02" class="rounded-circle">
+                  <span class="position-absolute extra-bullet translate-middle badge border border-light rounded-circle bg-danger p-1"><i class="elastiqueicon-plus-white"></i></span>
+                </div>
+                <div class="float-start">
+                  <p class="p-0 m-0">R$ 800,00</p>
+                  <p class="p-0 m-0 text-muted">03 itens</p>
+                </div>
+
+              </div>
+              <div class="col d-grid gap-2">
+                <!-- Expand Details button - SET ID HERE-->
+                <button type="button" class="btn btn-sm btn-expand-details accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseDetails6" aria-expanded="false" aria-controls="collapseDetails6">Mais detalhes</button>
+              </div>
+            </div><!-- /Order Resume -->
+            <!-- Expand Details -->
+            <div class="collapse" id="collapseDetails6"><!-- Expand Details button - SET ID HERE-->
+
+              <!-- Ordem Item List -->
+              <div class="order-itens-box">
+                <!-- Ordem Item -->
+                <div class="row order-item">
+                  <div class="col-auto me-auto g-0">
+                    <img src="./img/img01.jpg" alt="Product 01">
+                  </div>
+                  <div class="col align-self-center">
+                    <p class="p-0 m-0">Elastique</p>
+                    <p class="p-0 m-0 text-muted">R$ 250,00</p>
+                    <p class="p-0 m-0">01 unidade
+                      <span class="badge badge-order ms-2">Cor: Preto</span>
+                      <span class="badge badge-order ms-2">Tamanho: P</span>
+                    </p>  
+                  </div>
+                  <div class="col-auto me-auto g-0 align-self-center">
+                    <a href="#">Ver produto<i class="elastiqueicon-view float-end ms-2"></i></a>
+                  </div>
+                </div><!-- /Ordem Item -->
+
+                <!-- Ordem Item -->
+                <div class="row order-item">
+                  <div class="col-auto me-auto g-0">
+                    <img src="./img/img02.jpg" alt="Product 02">
+                  </div>
+                  <div class="col align-self-center">
+                    <p class="p-0 m-0">Elastique</p>
+                    <p class="p-0 m-0 text-muted">R$ 350,00</p>
+                    <p class="p-0 m-0">01 unidade
+                      <span class="badge badge-order ms-2">Cor: Neutro Rosado</span>
+                      <span class="badge badge-order ms-2">Tamanho: M</span>
+                    </p>  
+                  </div>
+                  <div class="col-auto me-auto g-0 align-self-center">
+                    <a href="#">Ver produto<i class="elastiqueicon-view float-end ms-2"></i></a>
+                  </div>
+                </div><!-- /Ordem Item -->
+
+                <!-- Ordem Item -->
+                <div class="row order-item">
+                  <div class="col-auto me-auto g-0">
+                    <img src="./img/img01.jpg" alt="Product 01">
+                  </div>
+                  <div class="col align-self-center">
+                    <p class="p-0 m-0">Elastique</p>
+                    <p class="p-0 m-0 text-muted">R$ 200,00</p>
+                    <p class="p-0 m-0">01 unidade
+                      <span class="badge badge-order ms-2">Cor: Preto</span>
+                      <span class="badge badge-order ms-2">Tamanho: P</span>
+                    </p>  
+                  </div>
+                  <div class="col-auto me-auto g-0 align-self-center">
+                    <a href="#">Ver produto<i class="elastiqueicon-view float-end ms-2"></i></a>
+                  </div>
+                </div><!-- /Ordem Item -->
+
+              </div><!-- /Ordem Item List -->
+
+            </div><!-- /Expand Details-->
+          </div><!-- /Order Box /Order List Item -->
+
+        </div><!-- /Orders List -->   
+
+      </div>
+    </div><!-- /Main Screen -->
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row footer-info">
+        <div class="col">
+          <p>Formas de pagamento</p>
+          <span class="footer-card"><img src="./img/footer-card-visa.png" alt="Bandeira Vissa"></span>
+          <span class="footer-card"><img src="./img/footer-card-master.png" alt="Bandeira Master Card"></span>
+          <span class="footer-card"><img src="./img/footer-card-paypal.png" alt="Pagamento PayPal"></span>
+          <span class="footer-card"><img src="./img/footer-card-diners.png" alt="Bandeira Diners"></span>
+          <span class="footer-card"><img src="./img/footer-card-hipercard.png" alt="Bandeira Hipercard"></span>
+          <span class="footer-card"><img src="./img/footer-card-americanexpress.png" alt="Bandeira Anerican Express"></span>
+          <span class="footer-card"><img src="./img/footer-card-elo.png" alt="Bandeira Elo"></span>
+        </div><!-- /Payment info -->
+
+        <div class="col-auto tags">
+          <img src="./img/site-blindado.png">
+          <img src="./img/reclame-aqui.png">
+          <img src="./img/site-protegido.png">
+        </div><!-- /Safety tags -->
+      </div>
+      <div class="row">
+        <div class="col copy">
+          <p>Preços e condições de pagamento exclusivos para compras via Internet. Vendas sujeitas à analise e confirmação de dados. Fica garantida a empresa a eventual retificação das ofertas e erros de digitação que possam ter sido veiculados, podendo ser estornado a compra. 77.941.490/0225-58 - Gazin Industria e Comercio De Móveis e Eletrodomesticos LTDA - ROD PR 082 SN - Centro - CEP: 87485000 -</p>
+        </div>
+      </div><!-- /Conditions of Use -->
+    </div>
+  </footer>
+
+<!-- Boostrap v5 Javascript bundle -->
+<script src="../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

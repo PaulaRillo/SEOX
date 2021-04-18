@@ -1,0 +1,294 @@
+/* Template Name: SEOX Front-End Teste | 0.2 Meus pedidos (detalhes de compra)
+   Author: Paula Rillo
+   Design: SEOX
+   Version: 1.0.0
+   Created: Apr 2021
+   Famework: Bootstrap v5.0
+   ================
+
+/Table of Contents/
+#Font
+#Main colors
+#Order status colors
+#Navbar colors
+#Borders
+#Position values
+#Custom Buttons
+#Main Background
+#Header Navbar
+#Sidebar Navigation
+#Page Content Column
+#Orders variables
+#Footer
+
+#Imports
+*/
+
+/* #Font */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+$font-family-base: 'Archivo', sans-serif;
+
+/* #Main colors */
+$primary: #FF7C76;
+$text-color: #5A4B49;
+$text-muted: #AEABAA;
+$off-white: #FAFAFA;
+$off-white2: #EFEDED;
+$off-white3: #FCFCFC;
+$off-white4: #F9F3F3;
+$footer-bg: #F8F9FA;
+$primary-strong:#FF5448;
+
+/* #Order status colors */
+$order-delivered-color: #82C91E;
+$order-shipped-color: #4C6EF5;
+$order-processing-color: #7950F2;
+$order-completed-color: #40C057;
+$order-success-color: #20C997;
+$order-canceled-color: #FA5252;
+$order-muted-color: #D7D5D4;
+$order-tracking-color: #EDF0FE;
+
+$theme-colors: (
+  "order-delivered":            $order-delivered-color,
+  "order-shipped":              $order-shipped-color,
+  "order-processing":           $order-processing-color,
+  "order-completed":            $order-completed-color,
+  "order-success":              $order-success-color,
+  "order-canceled":             $order-canceled-color,                 
+  "order-muted":                $order-muted-color,                 
+) !default;
+
+.progress-order-delivered { background-color: $order-delivered-color!important; }
+.progress-order-shipped { background-color: $order-shipped-color!important; }
+.progress-order-processing { background-color: $order-processing-color!important; }
+.progress-order-completed { background-color: $order-completed-color!important; }
+.progress-order-success { background-color: $order-success-color!important; }
+.progress-order-canceled { background-color: $order-canceled-color!important; }
+
+/* #Navbar colors */
+$navbar-light-brand-color: $primary;
+$navbar-light-color: rgba($text-color, 1) ;
+$navbar-light-hover-color: rgba($primary, .7) ;
+$navbar-light-active-color: rgba($text-color, .9) ;
+$navbar-light-disabled-color: rgba($text-color, .3) ;
+
+/* #Borders */
+$border-radius-1:            4px !important;
+$border-radius-2:            6px !important;
+$border-radius-3:            8px !important;
+
+/* #Position values */
+$position-values: (
+  0: 0,
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%
+) !default;
+
+/* #Custom Buttons */
+.btn-bag {
+    background-color: rgba($primary, .1) !important;
+    width: 40px;
+    height: 40px;
+}
+.btn-order{
+    padding: 17px!important;
+    border-radius: $border-radius-3;
+}
+.btn-shipping{
+    padding: 17px!important;
+    border-radius: $border-radius-3;  
+    border: solid 1px $off-white2!important;
+    background: $off-white3;
+}
+.btn-tracking{
+    padding: 14px!important;
+    color: $order-shipped-color!important;
+    border-radius: $border-radius-1;
+    background: $order-tracking-color!important;
+}
+
+/* #Expand Details button */
+$accordion-button-color: $text-color;
+$accordion-button-bg: #F7F6F6;
+$accordion-button-active-color: $text-color;
+$accordion-button-active-bg: $accordion-button-bg;
+
+/* #Main Background */
+main {
+    background: url(/img/main-background.svg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 90px;
+}
+
+/* #Header Navbar */
+.navbar {
+    min-height: 75px;
+}
+.navbar-brand {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.navbar button{
+    border:none;
+}
+.search-bar {
+    position: relative;
+    input {
+    font-size: 14px;
+    height: 40px;
+    color: rgba($text-color, .4) ;
+    padding: 15px 21px;
+    border: 1px solid rgba(193, 139, 134, 0.2);
+    }
+}
+.search-bar i {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+}
+
+/* #Sidebar Navigation */
+.nav-user {
+    min-width: 310px;
+    font-size: 14px;
+    border-radius: $border-radius-1;
+    background-color: white;
+    margin-top: 60px;
+    padding: 20px 23px;
+    .img-profile  {
+        width: 64px;
+        height: 64px;
+        
+        background-color: rgba($off-white4, .5);
+        background-image: url("data:image/svg+xml,%3Csvg width='30' height='32' viewBox='0 0 30 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M28.3764 30.328V27.1444C28.3764 25.4556 27.6872 23.8361 26.4604 22.6419C25.2337 21.4478 23.5698 20.777 21.8349 20.777H8.75193C7.01702 20.777 5.35317 21.4478 4.12641 22.6419C2.89964 23.8361 2.21045 25.4556 2.21045 27.1444V30.328' stroke='%23DEDBDB' stroke-opacity='0.75' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M15.2923 14.4089C18.9051 14.4089 21.8338 11.5581 21.8338 8.04151C21.8338 4.5249 18.9051 1.67413 15.2923 1.67413C11.6796 1.67413 8.75085 4.5249 8.75085 8.04151C8.75085 11.5581 11.6796 14.4089 15.2923 14.4089Z' stroke='%23DEDBDB' stroke-opacity='0.75' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    .user-name { font-size:16px; font-weight: 500; margin-bottom: 30px; }
+    .nav-link {
+        color: $text-color;
+        padding: 22px 18px;
+    }
+    .nav-link:hover {  background: rgba($off-white4, .5)!important;  }
+    .active {
+        color: $text-color!important;
+        background: rgba($off-white4, .5)!important;
+    }
+    i { margin-right: 20px; }
+}
+.photo-bullet {
+    width: 22px;
+    height: 22px;
+    padding: 4px!important;
+    bottom: -10px;
+}
+
+/* #Page Content Column */
+.page-title {
+    font-size: 28px;
+    color:white;
+    margin-top: 240px;
+}
+@media (min-width: 576px) {
+    .page-title {
+        margin-top: 40px;
+    }
+  }
+/* #Orders variables */
+.order-box {
+    font-size: 14px;
+    border-radius: $border-radius-1;
+    background-color: #fff;
+    border: solid 1px rgba($text-color, .1) ;
+    margin-bottom: 20px;
+    padding: 34px 26px;
+    .products {
+        width: 60px;
+        img{
+            width: 32px;
+            height: 32px;
+            border:solid 2px #fff;
+        }
+        img:nth-child(2) {
+            margin-left: -16px;
+        }
+    }
+    .extra-bullet {
+        top:35%; 
+        border:solid 2px #fff;
+        background-color: $primary-strong;
+        ;
+    }
+}
+.order-status-box { margin-top: 40px; }
+.shipping-box {
+    border-radius: $border-radius-1;
+    background: rgba($off-white, .5);
+    padding: 21px 0px 21px 26px;
+    margin: 22px 0 0 0;
+    border: solid 1px rgba($off-white2, .5);
+}
+.badge-order {
+    font-size: 12px!important;
+    color: $text-color!important;
+    border: solid 1px $off-white2;
+}
+.order-progress {
+    margin: 0px 50px 0px 35px;
+    .order-bullet{
+        width: 12px;
+        height: 12px;
+    }
+}
+.order-status-info {margin-top: 60px}
+.order-status {
+    font-size: 12px;
+    line-height: 12px;
+    width: 70px;
+    p:nth-child(2) {
+        font-size: 10px;
+        line-height: 20px;
+    }
+}
+.order-itens-box {margin: 40px 12px 0px 12px;}
+.order-item {
+    padding: 20px 0px;
+    border-top: solid 1px #F6F5F5;
+    img {
+        width: 72px;
+        height: 72px;
+        border-radius: $border-radius-3;
+    }
+    a { color: $text-color; text-decoration: none; }
+    &hover {color:$primary;}
+} .order-item:nth-child(1) {border: none;}
+.accordion-button {box-shadow: none!important;}
+
+/* #Footer */
+footer{
+    background: $footer-bg;
+    color: #000;
+}
+.footer-info {
+    padding: 60px 0px 30px 0px;
+    p { font-size:14px; }
+}
+.footer-card {
+    width: 37px;
+    height: 23px;
+    margin: 0 9px 0 0;
+    float: left;
+}
+.copy p{font-size: 12px;}
+.tags img {margin-left:46px;}
+
+/* #Imports */
+@import "elastiqueIcons.scss";
+@import "bootstrap/bootstrap.scss";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css");
