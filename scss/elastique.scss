@@ -118,7 +118,7 @@ $accordion-button-active-bg: $accordion-button-bg;
 
 /* #Main Background */
 main {
-    background: url(/img/main-background.svg);
+    background: url("../img/main-background.svg");
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -195,7 +195,7 @@ main {
     color:white;
     margin-top: 240px;
 }
-@media (min-width: 576px) {
+@media only screen and (max-width: 576px) {
     .page-title {
         margin-top: 40px;
     }
